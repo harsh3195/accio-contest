@@ -80,53 +80,6 @@ class Solution{
 static Node addLists(Node first, Node second){
 // code here
 // return head of sum list
-Node head = new Node(0);
-Node a = reverse(first);
-Node b = reverse(second);
-int carry = 0;
-Node curr = head;
-while(a != null || b != null) {
-int n1 = (a==null) ? 0 : a.data;
-int n2 = (b==null) ? 0 : b.data;
-int sum = n1 + n2 + carry;
-carry = (sum > 9) ? 1 : 0;
-sum %= 10;
-curr.next = new Node(sum);
-curr = curr.next;
-a = (a==null) ? a : a.next;
-b = (b==null) ? b : b.next;
-}
-
-if(carry == 1)
-curr.next = new Node(1);
-
-
-Node finalHead = reverse(head.next);
-return finalHead;
-}
-
-static Node reverse(Node head) {
-Node curr = head;
-Node prev = null, next = null;
-while(curr != null) {
-next = curr.next;
-curr.next = prev;
-prev = curr;
-curr = next;
-}
-return prev;
-}
 
 }
-
-
-2 4 5 3 3 4 5 
-
-
-3 9 0
-
-
-
-
-
-
+}

@@ -45,44 +45,7 @@ class FourSum{
 class Solution {
     public ArrayList<ArrayList<Integer>> fourSum(int[] A, int k) {
         // code here
-        int l, r;
-Arrays.sort(A);
-int n=A.length;
-
-Set<ArrayList<Integer>> set = new LinkedHashSet<>();
-
-for (int i = 0; i < n - 3; i++)
-{
-for (int j = i + 1; j < n - 2; j++)
-{
-
-l = j + 1;
-r = n - 1;
-while (l < r)
-{
-if (A[i] + A[j] + A[l] + A[r] == k)
-{
-ArrayList<Integer> list =new ArrayList<Integer>();
-list.add((A[i]));
-list.add((A[j]));
-list.add((A[l]));
-list.add((A[r]));
-l++;
-r--;
-set.add(list);
-}
-else if (A[i] + A[j] + A[l] + A[r] < k)
-l++;
-else
-r--;
-}
-
-}
-
-}
-ArrayList<ArrayList<Integer>> ans=new ArrayList<ArrayList<Integer>>(set);
-
-return ans;
+        
     }
 }
 
