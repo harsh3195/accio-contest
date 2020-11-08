@@ -6,19 +6,18 @@ import java.util.*;
 
 class FourSum{
     public static void main(String[] args) throws IOException {
-        BufferedReader br =
-            new BufferedReader(new InputStreamReader(System.in));
-        int tc = Integer.parseInt(br.readLine().trim());
+        Scanner sc = new Scanner(System.in);
+
+        int tc = sc.nextInt();
 
         while (tc-- > 0) {
-            String[] nk = br.readLine().trim().split(" ");
-            int n = Integer.parseInt(nk[0]);
-            int k = Integer.parseInt(nk[1]);
+            int n = sc.nextInt();
+            int k = sc.nextInt();
 
-            String[] str = br.readLine().trim().split(" ");
+            // String[] str = br.readLine().trim().split(" ");
             int[] a = new int[n];
             for (int i = 0; i < n; i++) {
-                a[i] = Integer.parseInt(str[i]);
+                a[i] = sc.nextInt();
             }
 
             Solution sln = new Solution();
@@ -86,3 +85,5 @@ ArrayList<ArrayList<Integer>> ans=new ArrayList<ArrayList<Integer>>(set);
 return ans;
     }
 }
+
+
